@@ -4,5 +4,6 @@ SRCS   = udns_dn.c udns_dntosp.c udns_parse.c udns_resolver.c udns_init.c \
 	udns_rr_srv.c udns_rr_naptr.c udns_codes.c udns_jran.c
 
 lib_LTLIBRARIES=libudns.la
+include_HEADERS = udns.h
 libudns_la_SOURCES= ${SRCS}
 libudns_la_LDFLAGS= -static
