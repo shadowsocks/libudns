@@ -5,6 +5,7 @@ AC_PREREQ([2.67])
 AC_INIT([udns], [0.4], [mjt@corpit.ru])
 AC_CONFIG_SRCDIR([udns.h])
 AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR(auto)
 AC_USE_SYSTEM_EXTENSIONS
 
@@ -18,6 +19,9 @@ dnl Checks for lib
 AC_DISABLE_STATIC
 AC_DISABLE_SHARED
 LT_INIT([dlopen])
+
+dnl Checks for inet_ntop
+ss_FUNC_INET_NTOP
 
 dnl Checks for programs.
 AC_PROG_CC
